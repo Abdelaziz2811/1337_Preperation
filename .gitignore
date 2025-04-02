@@ -1,0 +1,12 @@
+# Ignore all `.o` files (compiled object files)
+*.o
+
+# Ignore all log files
+*.log
+
+# Ignore a specific file
+secret.txt
+
+# Ignore a directory
+backup/
+
