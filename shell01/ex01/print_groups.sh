@@ -1,2 +1,2 @@
 #!/bin/sh
-printf "%s" "$(id -Gn | tr ' ' ',')"
+printf "%s" "$(id -Gn "$FT_USER" | tr ' ' ',')"
