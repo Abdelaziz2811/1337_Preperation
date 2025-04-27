@@ -6,7 +6,7 @@ char *ft_strdup(char *src)
 	while (src[length])
 		length++;
 
-	char *copy = malloc(length + 1);
+	char *copy = malloc(sizeof(char) * length + 1);
 
 	if (copy != NULL)
 	{
