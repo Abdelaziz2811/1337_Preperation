@@ -13,9 +13,32 @@ int main()
 			write(1, "buzz", 4);
 		else 
 		{
-			char c = i;
-			write(1, &c, 1);
+			if (i < 10)
+			{
+				char c = i + '0';
+				write(1, &c, 1);
+			}
+			else 
+			{
+				int n = i;
+				int rem;
+				char nums[2];
+				int j = 0;
+
+				while (n > 0)
+				{
+					rem = n % 10;
+					nums[j++] = rem + '0';
+					n /= 10;
+				}
+
+				while (--j >= 0)
+				{
+					write(1, &nums[j], 1);
+				}
+			}
 		}
+
 		write(1, "\n", 1);
 	}
 
