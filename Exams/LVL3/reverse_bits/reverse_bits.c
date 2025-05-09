@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 unsigned char   reverse_bits(unsigned char octet)
 {
 	int i;
@@ -13,10 +11,4 @@ unsigned char   reverse_bits(unsigned char octet)
     	}
 
 	return result;
-}
-
-int main()
-{
-	printf("%c", reverse_bits('&') );
-	return 0;
 }
