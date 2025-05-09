@@ -13,4 +13,3 @@ int max(int* tab, unsigned int len)
 	}
 	return 0;
 }
-
