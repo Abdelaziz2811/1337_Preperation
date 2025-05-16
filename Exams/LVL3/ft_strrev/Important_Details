@@ -1,0 +1,38 @@
+==============================
+ String Storage in C Overview
+==============================
+
+| Declaration Type   | Example                    | Memory Storage | Modifiable  | Notes                                   |
+|--------------------|----------------------------|----------------|-------------|-----------------------------------------|
+| String Literal     | char *s = "abc";           | .rodata        | ❌ No       | Shared across the program; read-only    |
+| Character Array    | char s[] = "abc";          | Stack          | ✅ Yes      | Local to function; auto-allocated       |
+| Heap Allocation    | char *s = malloc(...);     | Heap           | ✅ Yes      | Must be freed manually (use free())     |
+
+---------------------------------------
+ Memory Segment Summary
+---------------------------------------
+
+- .rodata (Read-Only Data):
+  • Contains string literals.
+  • Attempting to modify causes undefined behavior.
+
+- Stack:
+  • Stores local variables, including arrays like char s[].
+  • Automatically freed when function returns.
+  • Fast, but limited in size.
+
+- Heap:
+  • Used for dynamic memory allocation via malloc/calloc/realloc.
+  • Persistent until manually freed.
+  • Suitable for large or flexible memory needs.
+
+---------------------------------------
+ Additional Tips
+---------------------------------------
+
+- Use character arrays when you need to modify the string content.
+- Use heap allocation when you need dynamic sizes or the data must outlive the function.
+- Avoid modifying string literals to prevent segmentation faults.
+- Always null-terminate strings (`'\0'`) when constructing them manually.
+
+
