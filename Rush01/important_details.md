@@ -1,6 +1,6 @@
 # Rush01 — What I Learned
 
-This file summarizes the key concepts I learned and understood while implementing the `Rush01` project from the 1337 Piscine.
+This file summarizes the key concepts I learned and understood while implementing the `Rush01` project.
 
 ---
 
