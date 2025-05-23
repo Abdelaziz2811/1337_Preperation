@@ -29,8 +29,7 @@ int valid_options(char **options)
 				return 0;
 			
 			if (j != 0 && (options[i][j] < 'a' || options[i][j] > 'z'))
-				return 0;
-			
+				return 0;	
 			j++;
 		}
 		i++;
